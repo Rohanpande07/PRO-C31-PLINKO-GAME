@@ -33,18 +33,9 @@ function setup() {
 
   for(var j=50; j<=width-10; j=j+50){
     plinkos.push(new Plinko(j,375));
-  }
-
-  for(var r=0; r<=800; r=r+50){
-    if(frameCount % 60 === 0){
-      particles.push(new Particle(random(height/2-10, height/2+10), 10,7));
-    }
-  }
-  
+  } 
 }
  
-
-
 function draw() {
   background("black");
   textSize(20)
@@ -62,5 +53,9 @@ function draw() {
 
   for(var e=0; e<particles.length; e++){
     particles[e].display();
+  }
+
+  if(frameCount % 60 === 0){
+    particles.push(new Particle(random(width/2-15, width/2+15), 10,7));
   }
 }
