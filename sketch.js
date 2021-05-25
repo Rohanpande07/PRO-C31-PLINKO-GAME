@@ -56,6 +56,6 @@ function draw() {
   }
 
   if(frameCount % 60 === 0){
-    particles.push(new Particle(random(width/2-15, width/2+15), 10,7));
+    particles.push(new Particle(random(width/2-15, width/2+15), 10,10));
   }
 }
